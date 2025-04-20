@@ -65,3 +65,67 @@ Each output contains the `normalized_count` field, representing:
 
 ---
 
+
+# QGIS Urban Block Generator: Building-Based Spatial Aggregation Tool
+
+This plugin provides a custom QGIS Processing algorithm for generating **urban blocks** based on roads, buildings, waterways, natural objects and railroads infrastructure.
+
+## Features
+
+- Uses road geometry to define urban blocks via **polygonization** of road networks.
+- Integrates **railways** and **waterways** into block segmentation.
+- Automatically removes dead-end street segments and internal artifacts.
+- Performs **area-based filtering** of blocks (e.g., excludes blocks without buildings).
+- Aggregates building data by block (e.g., counts, average floors, FAR).
+- Outputs styled block polygons with normalized density metrics.
+
+---
+
+## Installation and Usage
+
+1. Copy the Python file into your QGIS Python script folder.
+2. Launch **QGIS**.
+3. Ensure the following Python libraries are installed:
+   - `geopandas`
+   - `shapely`
+   - `pandas`
+   - `osmnx`
+   - `networkx`
+4. Call `register_algorithm()` or restart QGIS to auto-load the tool.
+5. In the **Processing Toolbox**, find the algorithm under **Custom Tools** as **"Create Blocks"**.
+
+---
+
+## Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `Boundary Layer` | Polygon layer defining city or district boundaries |
+| `Roads Layer` | Line layer containing road geometry |
+| `Railroads Layer` | Line layer with rail infrastructure |
+| `Buildings Layer` | Polygon layer with building footprints |
+| `Waterway Layer` | Line layer of rivers, canals, etc. |
+| `Aggregation Column` | Optional: building attribute to aggregate (e.g., `r_floors`) |
+| `Target CRS` | Coordinate system for processing geometry (default: EPSG:4326) |
+
+---
+
+## Output
+
+- A polygon layer representing **urban blocks**.
+- Each block includes calculated values:
+  - `count`: number of buildings or average attribute value
+  - `normalized_count`: buildings per square kilometer or normalized attribute
+  - `far`: Floor Area Ratio (if `r_floors` provided)
+
+---
+
+## How It Works
+
+1. Roads and rails are merged and split at intersections.
+2. Dead-end road segments are extended to improve connectivity.
+3. Polygons are formed by **polygonizing** road networks.
+4. Polygons without buildings or too large/small are removed.
+5. Waterways are buffered and subtracted from block geometry.
+6. Metrics are calculated per block (building count, average, FAR).
+7. Final layer is styled with graduated color ramp for visualization.
