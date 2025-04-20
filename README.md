@@ -1,6 +1,6 @@
 # cities_mapping
 
-# QGIS Grid Generator: Hexagonal and Square Grid Aggregation Tool
+# QGIS Grids Generator (hexagonal and square)
 
 This Python module is designed for use in **QGIS** as a custom processing algorithm for generating **hexagonal** and **square** grids with aggregation of building data. 
 
@@ -66,7 +66,7 @@ Each output contains the `normalized_count` field, representing:
 ---
 
 
-# QGIS Urban Block Generator: Building-Based Spatial Aggregation Tool
+# QGIS Urban Block Generator
 
 This plugin provides a custom QGIS Processing algorithm for generating **urban blocks** based on roads, buildings, waterways, natural objects and railroads infrastructure.
 
