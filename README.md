@@ -30,7 +30,7 @@ This Python module is designed for use in **QGIS** as a custom processing algori
 
 ---
 
-## 📝 Parameters
+## Parameters
 
 | Parameter | Description |
 |----------|-------------|
