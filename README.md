@@ -114,7 +114,6 @@ This plugin provides a custom QGIS Processing algorithm for generating **urban b
 
 - A polygon layer representing **urban blocks**.
 - Each block includes calculated values:
-  - `count`: number of buildings or average attribute value
   - `normalized_count`: buildings per square kilometer or normalized attribute
   - `far`: Floor Area Ratio (if `r_floors` provided)
 
