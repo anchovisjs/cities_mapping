@@ -2,9 +2,9 @@
 
 # QGIS Grid Generator: Hexagonal and Square Grid Aggregation Tool
 
-This Python module is designed for use in **QGIS** as a custom processing algorithm for generating **hexagonal** and **square** grids with aggregation of building data. It enables spatial analysis of urban areas, particularly for visualizing and quantifying building density and structural characteristics such as average number of floors.
+This Python module is designed for use in **QGIS** as a custom processing algorithm for generating **hexagonal** and **square** grids with aggregation of building data. 
 
-## 📦 Features
+## Features
 
 - Automatically fetches **city boundaries, buildings, and road networks** using **OSMnx**.
 - Generates **H3 hexagonal grids** or regular **square grids** over the city area.
