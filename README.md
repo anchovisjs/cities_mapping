@@ -36,7 +36,7 @@ This Python module is designed for use in **QGIS** as a custom processing algori
 | `City Name` | Name of the city for fetching OSM data (e.g., `"Kazan, Russia"`) |
 | `Grid Type` | Select between Hexagonal, Square, or Both |
 | `Resolution` | H3 resolution (integer from 1 to 15) |
-| `Cell Size` | Cell size in meters for square grids (optional, calculated automatically if omitted) |
+| `Cell Size` | Cell size in meters for square grids (optional, calculated automatically) |
 | `Buildings Layer` | (Optional) Custom building layer to override OSM data |
 | `Aggregation Column` | Column name for aggregation (e.g., `r_floors`) |
 
