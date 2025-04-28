@@ -126,4 +126,4 @@ This plugin provides a custom QGIS Processing algorithm for generating **urban b
 4. Polygons without buildings or too large/small are removed.
 5. Waterways are buffered and subtracted from block geometry.
 6. Metrics are calculated per block (building count, average, FAR).
-7. Final layer is styled with graduated color ramp for visualization.
+7. Result layer is styled with graduated color ramp.
