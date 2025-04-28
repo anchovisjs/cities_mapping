@@ -225,7 +225,7 @@ class CreateGridAlgorithm(QgsProcessingAlgorithm):
             QgsProcessingParameterField(
                 self.AGGREGATION_COLUMN,
                 self.tr('Aggregation Column'),
-                parentLayerParameterName=self.BUILDINGS_LAYER,  # Привязываем к слою BUILDINGS_LAYER
+                parentLayerParameterName=self.BUILDINGS_LAYER,  
                 optional=True
             )
         )
