@@ -11,7 +11,6 @@ This Python module is designed for use in **QGIS** as a custom processing algori
 - Aggregates values from a specified attribute column (e.g., `r_floors`) per grid cell.
 - Computes **normalized metrics** (e.g., buildings per km², building density index).
 - Applies **graduated styling** to output layers for effective visualization.
-- Fully integrated into **QGIS Processing Toolbox** via a custom plugin interface.
 
 ---
 
@@ -77,7 +76,7 @@ This plugin provides a custom QGIS Processing algorithm for generating **urban b
 - Automatically removes dead-end street segments and internal artifacts.
 - Performs **area-based filtering** of blocks (e.g., excludes blocks without buildings).
 - Aggregates building data by block (e.g., counts, average floors, FAR).
-- Outputs styled block polygons with normalized density metrics.
+- Outputs styled block polygons.
 
 ---
 
