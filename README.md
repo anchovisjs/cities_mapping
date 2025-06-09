@@ -33,7 +33,7 @@ This Python module is designed for use in **QGIS** as a custom processing algori
 
 | Parameter | Description |
 |----------|-------------|
-| `City Name` | Name of the city for fetching OSM data (e.g., `"Kazan, Russia"`) |
+| `City Name` | Name of the city for fetching OSM data |
 | `Grid Type` | Select between Hexagonal, Square, or Both |
 | `Resolution` | H3 resolution (integer from 1 to 15) |
 | `Cell Size` | Cell size in meters for square grids (optional, calculated automatically) |
